@@ -99,7 +99,7 @@
                 <a href="https://scholar.google.com/citations?user=YbH43DQAAAAJ&hl=en">Yihong Wu</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://yche.site">Liqi Cheng</a><sup>1</sup>,
+                <a href="https://vistec.github.io">Liqi Cheng</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a href="https://dengdazhen.github.io/">Dazhen Deng</a><sup>2</sup>,
@@ -173,7 +173,7 @@
     </div>
   </section>
 
-  <section class="hero teaser">
+  <!-- <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div style="display: flex; justify-content: center;">
@@ -185,6 +185,29 @@
         segmented stroke features as input and ouputs a probability distribution for each segment, as shown in (C). (D)
         is the grh module for domain knowledge learning. (E) shows the detail of video feature modeling module.
         </h2>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h3 class="title is-3">Sequence to Tactic</h3>
+          <div class="content has-text-justified">
+            <p>
+              In racket sports analysis, consecutive three strokes are usually considered to be a tactic.
+              This approach allows us to structure complex sequences of strokes with varying lengths, making it easier
+              for subsequent analysis.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video" controls muted preload playsinline width="75%">
+              <source src="./static/videos/tactic.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -222,28 +245,6 @@
 
   <section class="section">
     <div class="container is-max-desktop has-text-centered">
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Experiments</h2>
-
-          <div style="display: flex; justify-content: center;">
-            <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
-              alt="Framework of ViSTec." style="width: 50%;">
-          </div>
-          <br>
-          <div class="content has-text-justified">
-            <p>
-              Our proposed approach excels across these evaluation metrics, achieving state-of-the-art results.
-            </p>
-            <p>
-              Furthermore, through testing, ViSTec demonstrates an inference speed of approximately 39.3 frames per
-              second (fps), thereby enabling the potential for real-time processing of live match broadcast videos.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Segmentation</h2>
@@ -295,7 +296,7 @@
               <img src="./static/images/experiment.png" class="interpolation-image" alt="Result image." />
             </div>
             <div class="column interpolation-video-column">
-              <p>ViSTec Result</p>
+              <p>Our Result</p>
               <div id="interpolation-image-wrapper">
                 Loading...
               </div>
@@ -305,27 +306,39 @@
           </div>
           <br>
 
-          <h3 class="title is-3">Sequence to Tactic</h3>
-          <div class="content has-text-justified">
-            <p>
-              In racket sports analysis, consecutive three strokes are usually considered to be a tactic.
-              This approach allows us to structure complex sequences of strokes with varying lengths, making it easier
-              for subsequent analysis.
-            </p>
-          </div>
-          <div class="content has-text-centered">
-            <video id="replay-video" controls muted preload playsinline width="75%">
-              <source src="./static/videos/tactic.mp4" type="video/mp4">
-            </video>
-          </div>
-
         </div>
       </div>
 
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Experiments</h2>
+
+          <div style="display: flex; justify-content: center;">
+            <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
+              alt="Framework of ViSTec." style="width: 50%;">
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              Our proposed approach excels across these evaluation metrics, achieving state-of-the-art results.
+            </p>
+            <p>
+              Furthermore, through testing, ViSTec demonstrates an inference speed of approximately 39.3 frames per
+              second (fps), thereby enabling the potential for real-time processing of live match broadcast videos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Cases</h2>
+        </div>
+      </div>
 
       <div class="columns is-centered">
         <div class="column">
-          <h2 class="title is-5">Case for Technical Level Analysis</h2>
+          <h2 class="title is-5">Technical Level Analysis</h2>
           <div class="columns is-centered">
             <div class="column content" style="height: 360px; overflow-y: scroll;">
               <img src="./static/images/case1.png" class="interpolation-image" alt="Case 1 image." />
@@ -334,7 +347,7 @@
         </div>
 
         <div class="column">
-          <h2 class="title is-5">Case for Tactical Level Analysis</h2>
+          <h2 class="title is-5">Tactical Level Analysis</h2>
           <div class="columns is-centered">
             <div class="column content">
               <img src="./static/images/case2.png" class="interpolation-image" alt="Case 2 image." />
