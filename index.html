@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Leverage sparse visual information and contextual knowledge to extract sequences of stroke techniques in racket sports videos for tactical analysis.">
+  <meta name="keywords" content="ViSTec, table tennis, tactical analysis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tactical Analysis in Knowledge-Intensive Racket Sports through Video Modeling</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation" style="display: none;">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable" style="display: none;">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="">
+              1
+            </a>
+            <a class="navbar-item" href="">
+              2
+            </a>
+            <a class="navbar-item" href="">
+              3
+            </a>
+            <a class="navbar-item" href="">
+              4
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Tactical Analysis in Knowledge-Intensive Racket Sports through
+              Video Modeling</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yche.site">Yuchen He</a>*<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://leoyuan.site">Zeqing Yuan</a>*<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=YbH43DQAAAAJ&hl=en">Yihong Wu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://yche.site">Liqi Cheng</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dengdazhen.github.io/">Dazhen Deng</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.ycwu.org/">Yingcai Wu</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>State Key Lab of CAD&CG, Zhejiang University</span>
+              <br>
+              <span class="author-block"><sup>2</sup>School of Software Technology, Zhejiang University</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">(*denotes equal contribution)</span>
+            </div>
+
+            <div class="column has-text-centered" style="display: none;">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div style="display: flex; justify-content: center;">
+          <img src="./static/images/ViSTec.png" class="interpolation-image" alt="Framework of ViSTec."
+            style="width: 60%;">
+        </div>
+        <h2 class="subtitle has-text-centered"></h2>
+        The framework of <strong>ViSTec</strong>. (A) is the stroke segmentation module. (B) is the cls module, take
+        segmented stroke features as input and ouputs a probability distribution for each segment, as shown in (C). (D)
+        is the grh module for domain knowledge learning. (E) shows the detail of video feature modeling module.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The immense popularity of racket sports has fueled substantial demand in tactical analysis with broadcast
+              videos. However, existing manual methods require laborious annotation, and recent attempts leveraging
+              video perception models are limited to low-level annotations like ball trajectories, overlooking tactics
+              that necessitate an understanding of stroke techniques. State-of-the-art action segmentation models also
+              struggle with technique recognition due to frequent occlusions and motion-induced blurring in racket
+              sports videos.
+              To address these challenges, We propose ViSTec, a <strong>Vi</strong>deo-based <strong>S</strong>ports
+              <strong>Tec</strong>hnique recognition model inspired by human cognition that synergizes sparse visual
+              data with rich contextual insights. Our approach integrates a graph to explicitly model strategic
+              knowledge in stroke sequences and enhance technique recognition with contextual inductive bias. A
+              two-stage action perception model is jointly trained to align with the contextual knowledge in the graph.
+              Experiments demonstrate that our method outperforms existing models by a significant margin. Case studies
+              with experts from the Chinese national table tennis team validate our model's capacity to automate
+              analysis for technical actions and tactical strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Experiments</h2>
+
+          <div style="display: flex; justify-content: center;">
+            <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
+              alt="Framework of ViSTec." style="width: 50%;">
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              Our proposed approach excels across these evaluation metrics, achieving state-of-the-art results.
+            </p>
+            <p>
+              Furthermore, through testing, ViSTec demonstrates an inference speed of approximately 39.3 frames per
+              second (fps), thereby enabling the potential for real-time processing of live match broadcast videos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Segmentation</h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <h2 class="title is-5">Ground Truth</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="groundtruth-video" controls playsinline height="100%">
+                <source src="./static/videos/gt.webm" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="title is-5">ViSTec</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/model_res.webm" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="title is-5">Baseline</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/baseline_res.webm" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column has-text-centered">
+              <img src="./static/images/experiment.png" class="interpolation-image" alt="Result image." />
+            </div>
+            <div class="column interpolation-video-column">
+              <p>ViSTec Result</p>
+              <div id="interpolation-image-wrapper">
+                Loading...
+              </div>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="100"
+                value="0" type="range">
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-3">Sequence to Tactic</h3>
+          <div class="content has-text-justified">
+            <p>
+              In racket sports analysis, consecutive three strokes are usually considered to be a tactic.
+              This approach allows us to structure complex sequences of strokes with varying lengths, making it easier
+              for subsequent analysis.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video" controls muted preload playsinline width="75%">
+              <source src="./static/videos/tactic.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column">
+          <h2 class="title is-5">Case for Technical Level Analysis</h2>
+          <div class="columns is-centered">
+            <div class="column content" style="height: 360px; overflow-y: scroll;">
+              <img src="./static/images/case1.png" class="interpolation-image" alt="Case 1 image." />
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="title is-5">Case for Tactical Level Analysis</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <img src="./static/images/case2.png" class="interpolation-image" alt="Case 2 image." />
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{2024vistec,
+      title     = {Tactical Analysis in Knowledge-Intensive Racket Sports through Video Modeling},
+      author    = {Yuchen He and Zeqing Yuan and Yihong Wu and Liqi Cheng and Dazhen Deng and Yingcai Wu},
+      journal   = {AAAI Conference on Artificial Intelligence},
+      year      = {2024}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The style of this website is adapted from <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
