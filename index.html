@@ -7,7 +7,7 @@
     content="Leverage sparse visual information and contextual knowledge to extract sequences of stroke techniques in racket sports videos for tactical analysis.">
   <meta name="keywords" content="ViSTec, table tennis, tactical analysis">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tactical Analysis in Knowledge-Intensive Racket Sports through Video Modeling</title>
+  <title>ViSTec: Video Modeling for Sports Technique Recognition and Tactical Analysis</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,8 +88,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Tactical Analysis in Knowledge-Intensive Racket Sports through
-              Video Modeling</h1>
+            <h1 class="title is-1 publication-title">ViSTec: Video Modeling for Sports Technique Recognition and Tactical Analysis</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://yche.site">Yuchen He</a>*<sup>1</sup>,</span>
@@ -116,7 +115,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">(*denotes equal contribution)</span>
+              <span class="author-block">(*denotes equal contribution, each may be listed first)</span>
             </div>
 
             <div class="column has-text-centered" style="display: none;">
@@ -194,12 +193,15 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h3 class="title is-3">Sequence to Tactic</h3>
+          <h3 class="title is-3">Background: Racket Sports Analysis</h3>
+          <h3 class="title is-4">Game Videos -> Technique Sequences -> Tactical Analysis</h3>
           <div class="content has-text-justified">
             <p>
-              In racket sports analysis, consecutive three strokes are usually considered to be a tactic.
-              This approach allows us to structure complex sequences of strokes with varying lengths, making it easier
-              for subsequent analysis.
+              Racket sports, including tennis, badminton, and table tennis, are distinguished by their highly strategic nature, drawing millions of players and fans to explore tactical analysis. 
+              A game in racket sports consists of rallies, which are sequences of strokes executed by players alternately from both sides. 
+              Here, a <b>stroke</b> refers to the action of hitting the ball with a racket, and each stroke can employ a certain <b>technique</b>, such as “topspin” and “push.” 
+              A <b>tactic</b> is characterized by a series of consecutive stroke techniques.
+
             </p>
           </div>
           <div class="content has-text-centered">
@@ -247,7 +249,8 @@
     <div class="container is-max-desktop has-text-centered">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Segmentation</h2>
+          <h2 class="title is-3">Experiments</h2>
+          <h2 class="title is-4">Qualitative Demos</h2>
         </div>
       </div>
 
@@ -311,8 +314,9 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Experiments</h2>
+          <h2 class="title is-4">Quantitative Results</h2>
 
+          <h2 class="title is-5">SOTA Accuracy</h2>
           <div style="display: flex; justify-content: center;">
             <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
               alt="Framework of ViSTec." style="width: 50%;">
@@ -320,11 +324,13 @@
           <br>
           <div class="content has-text-justified">
             <p>
-              Our proposed approach excels across these evaluation metrics, achieving state-of-the-art results.
+              Our proposed approach excels across all common evaluation metricsin video action segmentation, achieving state-of-the-art results in sports technique segmentation from broadcast game videos.
             </p>
+          </div>
+          <h2 class="title is-5">Real-time Performance</h2>
+          <div class="content has-text-justified">
             <p>
-              Furthermore, through testing, ViSTec demonstrates an inference speed of approximately 39.3 frames per
-              second (fps), thereby enabling the potential for real-time processing of live match broadcast videos.
+              ViSTec demonstrates an inference speed of approximately 39.3 frames per second (fps) in offline tests on a single A100 GPU, thereby enabling the potential for real-time processing of broadcast game videos.
             </p>
           </div>
         </div>
@@ -332,10 +338,13 @@
 
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Cases</h2>
+          <h2 class="title is-3">Case Studies</h2>
         </div>
       </div>
-
+      <div class="content has-text-justified">
+        <p>
+          We present two case studies conducted with senior analysts from the Chinese table tennis team, which address the most critical and complex facets of sports analysis that require domain knowledge: technique analysis and tactical analysis.
+        </p>
       <div class="columns is-centered">
         <div class="column">
           <h2 class="title is-5">Technical Level Analysis</h2>
