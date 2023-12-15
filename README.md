@@ -1,4 +1,4 @@
-# Tactical Analysis in Knowledge-Intensive Racket Sports through Video Modeling
+# ViSTec: Video Modeling for Sports Technique Recognition and Tactical Analysis
 
 This is the repository that contains source code for project website of *Tactical Analysis in Knowledge-Intensive Racket Sports through Video Modeling* (AAAI-24).
 
