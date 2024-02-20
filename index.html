@@ -168,10 +168,10 @@
         </div>
       </div>
     </div>
-  </section>
+  <!-- </section> -->
 
 
-  <section class="section">
+  <!-- <section class="section"> -->
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
@@ -198,28 +198,34 @@
         </div>
       </div>
       <!--/ Abstract. -->
+      
+      <div class="content has-text-centered">
+        <video id="replay-video" controls preload playsinline width="75%">
+          <source src="./static/videos/ViSTec_video.mp4" type="video/mp4">
+        </video>
+      </div>
+
     </div>
   </section>
 
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop has-text-centered">
 
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h3 class="title is-3">Video</h3>
-          <!-- <h3 class="title is-4">Game Videos -> Technique Sequences -> Tactical Analysis</h3> -->
           <div class="content has-text-justified">
           </div>
           <div class="content has-text-centered">
-            <video id="replay-video" controls preload playsinline width="100%">
+            <video id="replay-video" controls preload playsinline width="75%">
               <source src="./static/videos/ViSTec_video.mp4" type="video/mp4">
             </video>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -248,23 +254,23 @@
             <p>
               Racket sports, including tennis, badminton, and table tennis, are distinguished by their highly strategic nature, drawing millions of players and fans to explore tactical analysis. 
               A game in racket sports consists of rallies, which are sequences of strokes executed by players alternately from both sides. 
-              Here, a <b>stroke</b> refers to the action of hitting the ball with a racket, and each stroke can employ a certain <b>technique</b>, such as “topspin” and “push.” 
+              Here, a <b>stroke</b> refers to the action of hitting the ball with a racket, and each stroke can employ a certain <b>technique</b>, such as "topspin" and "push." 
               A <b>tactic</b> is characterized by a series of consecutive stroke techniques.
 
             </p>
           </div>
           <div class="content has-text-centered">
-            <video id="replay-video" controls muted preload playsinline width="75%">
+            <video id="replay-video" autoplay muted loop width="50%">
               <source src="./static/videos/tactic.mp4" type="video/mp4">
             </video>
+            <p>Background illustration</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-
-  <section class="section">
+  <!-- </section> -->
+  <br><br>
+  <!-- <section class="section"> -->
     <div class="container is-max-desktop has-text-centered">
       <div class="columns is-centered">
         <div class="column is-full-width">
@@ -278,7 +284,7 @@
           <h2 class="title is-5">Ground Truth</h2>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="groundtruth-video" controls playsinline height="100%">
+              <video id="groundtruth-video" autoplay muted loop height="100%">
                 <source src="./static/videos/gt.webm" type="video/mp4">
               </video>
             </div>
@@ -290,7 +296,7 @@
           <h2 class="title is-5">ViSTec</h2>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="matting-video" controls playsinline height="100%">
+              <video id="matting-video" autoplay muted loop height="100%">
                 <source src="./static/videos/model_res.webm" type="video/mp4">
               </video>
             </div>
@@ -302,7 +308,7 @@
           <h2 class="title is-5">Baseline</h2>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="matting-video" controls playsinline height="100%">
+              <video id="matting-video" autoplay muted loop height="100%">
                 <source src="./static/videos/baseline_res.webm" type="video/mp4">
               </video>
             </div>
@@ -327,7 +333,6 @@
             </div>
           </div>
           <br>
-
         </div>
       </div>
 
@@ -336,16 +341,16 @@
           <h2 class="title is-4">Quantitative Results</h2>
 
           <h2 class="title is-5">SOTA Accuracy</h2>
-          <div style="display: flex; justify-content: center;">
-            <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
-              alt="Framework of ViSTec." style="width: 50%;">
-          </div>
-          <br>
           <div class="content has-text-justified">
             <p>
               Our proposed approach excels across all common evaluation metricsin video action segmentation, achieving state-of-the-art results in sports technique segmentation from broadcast game videos.
             </p>
           </div>
+          <div style="display: flex; justify-content: center;">
+            <img src="./static/images/comparative_and_ablation_study.png" class="interpolation-image"
+              alt="Framework of ViSTec." style="width: 50%;">
+          </div>
+          <br>
           <h2 class="title is-5">Real-time Performance</h2>
           <div class="content has-text-justified">
             <p>
@@ -354,7 +359,12 @@
           </div>
         </div>
       </div>
-
+    </div>
+  <!-- </section> -->
+  <br><br>
+  <!-- <section class="section"> -->
+    <div class="container is-max-desktop has-text-centered">
+    
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Case Studies</h2>
@@ -385,9 +395,18 @@
         </div>
       </div>
 
-    </div>
-  </section>
+      <h2 class="title is-5">Case 1: Analyzing Personalized Characteristics of Technical Actions</h2>
+      <p>
+        As shown in the left figure, for Japanese players, technique "Block" and "Topspin" exhibits striking analogy, as do "Push" and "Short". These similarities within deep visual features "reveal the high consistency and deceptive nature of their certain techniques," noted by the experts. This observation furnishes valuable insights, allowing opponents to enhance their preparation and anticipation of the players' moves in specific techniques, a critical factor in the fast-paced world of racket sports. Similar analysis can be transferred to other players in real time, enabling the understanding of the unique characteristics of their opponent's actions.
+      </p>
+      <h2 class="title is-5">Case 2: Discovering Optimal Tactical Choices</h2>
+      <p>
+        As demonstrated in the right figure (B), the sequence "Serve Short Topspin"exhibits the highest scoring rate. This suggests that when serving on our side and the subsequent opponent's stroke involves a "Short" technique, the optimal choice in terms of scoring rate is to respond with a "Topspin" stroke in the next play. Moving on to the right figure (C), it becomes evident that following two strokes of the "Serve" and "Short" techniques, persisting with another "Short" stroke or responding with "Others" leads to a sudden drop in scoring rate to around 0.43. This underscores that taking the initiative early in the game and launching an offensive increases our likelihood of winning.
+      </p>
 
+    </div>
+  </div>
+  </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
